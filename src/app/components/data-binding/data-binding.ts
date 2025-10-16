@@ -10,6 +10,10 @@ export class DataBinding {
 
   courseName: string = "Angular 20"
 
+  width: string = 'width: 20px'
+
+  height: string = 'height: 30px'
+
   IdNumber: number = 45
 
   duration: string = 'Hello world'
