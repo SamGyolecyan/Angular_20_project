@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-admin',
@@ -6,8 +6,22 @@ import { Component } from '@angular/core';
   templateUrl: './admin.html',
   styleUrl: './admin.scss'
 })
-export class Admin {
+export class Admin implements OnInit, AfterViewInit, OnDestroy {
 
-  public numb: number = 0
+  constructor() {
+    console.log('constructor executed!!!')
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit')
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit')
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy')
+  }
 
 }
