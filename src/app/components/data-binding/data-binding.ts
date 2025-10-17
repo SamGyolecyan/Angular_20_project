@@ -1,16 +1,23 @@
 import { Component } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.scss'
 })
 export class DataBinding {
 
+  isActive: boolean = false
+
   courseName: string = "Angular 20"
 
   width: string = 'width: 20px'
+
+  second: string = 'secondary'
 
   height: string = 'height: 30px'
 
@@ -20,6 +27,10 @@ export class DataBinding {
 
   currentDate: Date = new Date()
 
-  constructor() {}
+  constructor() {
+    setTimeout(() => {
+      this.IdNumber = 90
+    },10000)
+  }
 
 }
